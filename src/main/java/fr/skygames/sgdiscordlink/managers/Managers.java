@@ -5,6 +5,7 @@ import fr.skygames.sgdiscordlink.listeners.bungee.BungeeListener;
 import fr.skygames.sgdiscordlink.listeners.bungee.DiscordLinkCommand;
 import fr.skygames.sgdiscordlink.utils.CustomLogger;
 import fr.skygames.sgdiscordlink.utils.FileManager;
+import fr.skygames.sgdiscordlink.utils.HttpUtils;
 import net.md_5.bungee.api.plugin.PluginManager;
 
 public class Managers {
@@ -26,8 +27,10 @@ public class Managers {
         fileManager.createFile("globalMessages");
         fileManager.createFile("apiconfig");
 
+        HttpUtils.init(fileManager);
+
         PluginManager pm = main.getProxy().getPluginManager();
-        pm.registerListener(main, new BungeeListener(fileManager));
+        pm.registerListener(main, new BungeeListener());
         pm.registerCommand(main, new DiscordLinkCommand(fileManager));
 
         logger.info("Loading JDA...");
