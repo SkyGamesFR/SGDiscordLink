@@ -6,7 +6,7 @@ import java.time.temporal.TemporalAccessor;
 
 public class EmbedUtils {
 
-    private EmbedBuilder embedBuilder;
+    private final EmbedBuilder embedBuilder;
 
     public EmbedUtils() {
         embedBuilder = new EmbedBuilder();

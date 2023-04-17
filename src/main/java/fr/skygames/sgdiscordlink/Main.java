@@ -1,6 +1,5 @@
 package fr.skygames.sgdiscordlink;
 
-import fr.skygames.sgdiscordlink.managers.JDAManager;
 import fr.skygames.sgdiscordlink.managers.Managers;
 import fr.skygames.sgdiscordlink.utils.CustomLogger;
 import net.md_5.bungee.api.plugin.Plugin;
