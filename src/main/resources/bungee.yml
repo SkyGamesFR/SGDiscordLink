@@ -1,0 +1,10 @@
+name: SGDiscordLink
+version: '${version}'
+main: fr.skygames.sgdiscordlink.Main
+author: FullGreen
+commands:
+  discordlink:
+    description: Discord Link Plugin
+    aliases: [dl]
+    usage: /discordlink generate
+
